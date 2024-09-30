@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# @sliderzz/daz-ui
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`@sliderzz/daz-ui` is a React component library that provides reusable UI components for your projects. Currently, it includes the `Dazcard` component.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+You can install `@sliderzz/daz-ui` via npm or yarn:
 
-### `npm start`
+### Using npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install @sliderzz/daz-ui
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Using yarn
 
-### `npm test`
+```bash
+yarn add @sliderzz/daz-ui
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+### Importing Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use the `Dazcard` component, import it from `@sliderzz/daz-ui`:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```typescript
+import { Dazcard } from "@sliderzz/daz-ui";
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Example
 
-### `npm run eject`
+Here’s a basic example of how to use the our component in a React application:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```typescript
+// The Dazcard component accepts the following props:
+// 1. title (string): The title to display on the card.
+// 2. desc (string): The description to display on the card.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+import React from "react";
+import { Dazcard } from "@sliderzz/daz-ui";
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const App = () => (
+    <div>
+        <Dazcard
+            title="Card Title"
+            desc="This is a description of the card."
+        />
+    </div>
+);
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+export default App;
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to use amazing components!

@@ -1,0 +1,107 @@
+.card {
+  width: 190px;
+  background: white;
+  padding: .4em;
+  border-radius: 6px;
+  overflow: hidden; /* Ensure no overflow from the card */
+}
+
+.card-image {
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 130px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container */
+  display: block; /* Remove default inline spacing */
+}
+
+.card-image:hover {
+  transform: scale(0.98);
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.desc {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.desc:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+button {
+  --color: rgba(129, 140, 248);
+  background-color: var(--color);
+  font-family: inherit;
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color);
+  transition: color .5s;
+  line-height: 0;
+  padding: 2px;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+button:hover {
+  color: var(--color);
+}
+
+button:before {
+  top: 100%;
+  right: 100%;
+  transition: all .7s;
+}
+
+button:hover:before {
+  top: -30px;
+  right: -20px;
+}
+
+button:active:before {
+  background: #e9ecef;
+  transition: background 0s;
+}
